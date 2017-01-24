@@ -8,16 +8,6 @@ public class BaseAppRun {
 
 	/**
 	 * 
-	 * @param prefix
-	 * @return
-	 */
-	private static String getArchFileName(String prefix) {
-	    
-		return prefix.concat("_").concat(getOSName()).concat("_").concat(getArchName()).concat(".jar");
-	}
-	
-	/**
-	 * 
 	 * @return
 	 */
 	private static String getOSName() {
@@ -44,7 +34,17 @@ public class BaseAppRun {
 	    return ((null != osArch) && (osArch.contains("64"))) ? "64" : "32";
 	}
 	
-	private static void addJarToClasspath(String jarFile) {
+	/**
+	 * 
+	 * @param prefix
+	 * @return
+	 */
+	protected static String getArchFileName(String prefix) {
+	    
+		return prefix.concat("_").concat(getOSName()).concat("_").concat(getArchName()).concat(".jar");
+	}
+	
+	protected static void addJarToClasspath(String jarFile) {
 	    
 	    try {
 
