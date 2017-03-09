@@ -1,4 +1,4 @@
-package ru.aselit;
+package com.aselitsoftware;
 
 import java.lang.reflect.Method;
 import java.net.URL;
